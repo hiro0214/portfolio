@@ -124,6 +124,10 @@
       }
       > p {
         font-size:20px;
+        &::first-letter {
+          font-size:36px;
+          font-weight:600;
+        }
       }
       &-enter {
         opacity:0;
