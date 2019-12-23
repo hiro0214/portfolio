@@ -12,56 +12,17 @@
       <div class="right-box-text">
         <transition name="title-top" appear>
           <div class="right-box-top">
-            <transition name="top-h" appear>
-              <span>H</span>
-            </transition>
-            <transition name="top-i" appear>
-              <span>i</span>
-            </transition>
-            <transition name="top-r" appear>
-              <span>r</span>
-            </transition>
-            <transition name="top-o" appear>
-              <span>o</span>
-            </transition>
-            <transition name="top-1" appear>
-              <span>'</span>
-            </transition>
-            <transition name="top-s" appear>
-              <span>s</span>
-            </transition>
+            <transition-group name="textTop" @appear="appearTop">
+              <span v-for="(text, index) in textTop" :key="text" :data-index="index">{{ text }}</span>
+            </transition-group>
           </div>
         </transition>
 
         <transition name="title-bottom" appear>
           <div class="right-box-bottom">
-            <transition name="bottom-p" appear>
-              <span>P</span>
-            </transition>
-            <transition name="bottom-o1" appear>
-              <span>o</span>
-            </transition>
-            <transition name="bottom-r" appear>
-              <span>r</span>
-            </transition>
-            <transition name="bottom-t" appear>
-              <span>t</span>
-            </transition>
-            <transition name="bottom-f" appear>
-              <span>f</span>
-            </transition>
-            <transition name="bottom-o2" appear>
-              <span>o</span>
-            </transition>
-            <transition name="bottom-l" appear>
-              <span>l</span>
-            </transition>
-            <transition name="bottom-i" appear>
-              <span>i</span>
-            </transition>
-            <transition name="bottom-o3" appear>
-              <span>o</span>
-            </transition>
+            <transition-group name="textBottom" @appear="appearBottom">
+              <span v-for="(text, index) in textBottom" :key="text + index" :data-index="index">{{ text }}</span>
+            </transition-group>
           </div>
         </transition>
       </div>
@@ -148,160 +109,48 @@
   }
 }
 
-.top {
-  &-h-enter {
+.textTop {
+  &-enter {
     transform: rotateY(0deg);
     &-to {
       transform: rotateY(360deg);
     }
     &-active {
       transition:1s;
-      transition-delay:5s;
-    }
-  }
-  &-i-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:5.2s;
-    }
-  }
-  &-r-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:5.4s;
-    }
-  }
-  &-o-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:5.6s;
-    }
-  }
-  &-1-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:5.8s;
-    }
-  }
-  &-s-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:6s;
     }
   }
 }
 
-.bottom {
-  &-p-enter {
+.textBottom {
+  &-enter {
     transform: rotateY(0deg);
     &-to {
       transform: rotateY(360deg);
     }
     &-active {
       transition:1s;
-      transition-delay:6.2s;
-    }
-  }
-  &-o1-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:6.4s;
-    }
-  }
-  &-r-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:6.6s;
-    }
-  }
-  &-t-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:6.8s;
-    }
-  }
-  &-f-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:7.0s;
-    }
-  }
-  &-o2-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:7.2s;
-    }
-  }
-  &-l-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:7.4s;
-    }
-  }
-  &-i-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:7.6s;
-    }
-  }
-  &-o3-enter {
-    transform: rotateY(0deg);
-    &-to {
-      transform: rotateY(360deg);
-    }
-    &-active {
-      transition:1s;
-      transition-delay:7.8s;
     }
   }
 }
 
 </style>
+
+<script>
+export default {
+  data () {
+    return {
+      textTop: ['H', 'i', 'r', 'o', "'", 's'],
+      textBottom: ['P', 'o', 'r', 't', 'f', 'o', 'l', 'i', 'o']
+    }
+  },
+  methods: {
+    appearTop (el) {
+      el.style.transitionDelay = 5000 + 200 * parseInt(el.dataset.index) + 'ms'
+    },
+    appearBottom (el) {
+      el.style.transitionDelay = 6200 + 200 * parseInt(el.dataset.index) + 'ms'
+    }
+  }
+}
+
+</script>
