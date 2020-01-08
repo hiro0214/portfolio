@@ -23,6 +23,12 @@ export default {
     Home,
     Show
   },
+  mounted () {
+    this.$store.dispatch('work/workInit')
+  },
+  destroyed () {
+    this.$store.dispatch('work/workOut')
+  },
   data () {
     return {
       currentView: 'Home'

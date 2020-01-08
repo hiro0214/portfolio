@@ -125,7 +125,7 @@
       > p {
         font-size:20px;
         &::first-letter {
-          font-size:30px;
+          font-size:28px;
           font-weight:600;
         }
       }
@@ -194,7 +194,5 @@
     transition-delay: 3.4s;
   }
 }
-
-
 
 </style>

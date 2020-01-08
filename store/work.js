@@ -1,4 +1,5 @@
 export const state = {
+  workLoad: false,
   work: [],
   works: [
     { title: 'ポートフォリオ', about: '自分自身のポートフォリオサイトです。',text: '自身のポートフォリオサイトとして当サイトを作成しました。', img: require('~/assets/portfolio-img.png'), tech: 'Nuxt.js', day: '5日', url: '', git: 'https://github.com/hiro0214/portfolio' },
@@ -12,18 +13,25 @@ export const state = {
 // ドラクエのgit, タイピングのurl
 
 export const mutations = {
+  workInit(state) {
+    state.workLoad = true
+  },
+  workOut(state) {
+    state.workLoad = false
+  },
   workShow(state, payload) {
     state.work = state.works[payload]
-  },
-  workInit(state) {
-    // いらないかも
-    state.work = []
   }
 }
 
 export const actions = {
-  workShow({ commit }, payload) {
+  workInit({ commit }) {
     commit('workInit')
+  },
+  workOut({ commit }) {
+    commit('workOut')
+  },
+  workShow({ commit }, payload) {
     commit('workShow', payload)
   }
 }

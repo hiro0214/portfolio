@@ -17,7 +17,7 @@
 
         <transition name="skill-main-left-first" appear>
           <div>
-            <p>2019年 4月 : HTML/CSS/JavaScript</p>
+            <p>2019年 4月~ : HTML/CSS/JavaScript</p>
             <span>Progate、ドットインストールにて基礎を学ぶ</span>
           </div>
         </transition>
@@ -58,8 +58,8 @@
 
         <transition name="skill-main-right-second" appear>
           <div>
-            <p class="fifth right-border">2019年 11月 : 個人アプリの作成/Vue.js</p>
-            <span>Railsを用いてオリジナルのアプリを作成<br>Vue.jsの参考書を購入し学ぶ</span>
+            <p class="fifth right-border">2019年 11月~ : 個人アプリの作成/Vue.js</p>
+            <span>Railsを用いてオリジナルのアプリを作成<br>Vue.jsの参考書を購入し学ぶ<br>Nuxt.jsを勉強しアプリの作成を行う</span>
           </div>
         </transition>
       </div>
@@ -144,7 +144,7 @@ export default {
         border:solid 1px rgb(179, 179, 179);
         transform: rotate(40deg);
         position:absolute;
-        top:74px;
+        top:70px;
         right:-106px;
       }
     }
@@ -223,8 +223,8 @@ export default {
           border:solid 1px rgb(179, 179, 179);
           transform: rotate(-40deg);
           position:absolute;
+          top:70px;
           left:-105px;
-          top:74px;
         }
       }
       &-first-enter {
