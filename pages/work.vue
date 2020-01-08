@@ -9,8 +9,28 @@
       </div>
     </div>
 
+    <component :is="currentView"></component>
+
   </div>
 </template>
+
+<script>
+import Home from '~/components/work/index.vue'
+import Show from '~/components/work/show.vue'
+
+export default {
+  components: {
+    Home,
+    Show
+  },
+  data () {
+    return {
+      currentView: 'Home'
+    }
+  }
+}
+
+</script>
 
 <style lang="scss" scoped>
 

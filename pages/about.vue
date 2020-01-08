@@ -68,7 +68,7 @@
     line-height:150px;
   }
   &-main {
-    background:rgb(235, 235, 235);
+    background:rgb(240, 240, 240);
     padding: 20px 120px 50px;
     display:flex;
     &-left {
@@ -125,7 +125,7 @@
       > p {
         font-size:20px;
         &::first-letter {
-          font-size:36px;
+          font-size:30px;
           font-weight:600;
         }
       }
