@@ -2,24 +2,24 @@
   <div class="home">
 
     <div class="left-box">
-      <transition name="left" appear>
-        <div class="left-box-animate"></div>
+      <transition name="left">
+        <div v-if="load" class="left-box-animate"></div>
       </transition>
     </div>
 
     <div class="right-box">
 
       <div class="right-box-text">
-        <transition name="title-top" appear>
-          <div class="right-box-top">
+        <transition name="title-top">
+          <div v-if="load" class="right-box-top">
             <transition-group name="textTop" @appear="appearTop">
               <span v-for="(text, index) in textTop" :key="text" :data-index="index">{{ text }}</span>
             </transition-group>
           </div>
         </transition>
 
-        <transition name="title-bottom" appear>
-          <div class="right-box-bottom">
+        <transition name="title-bottom">
+          <div v-if="load" class="right-box-bottom">
             <transition-group name="textBottom" @appear="appearBottom">
               <span v-for="(text, index) in textBottom" :key="text + index" :data-index="index">{{ text }}</span>
             </transition-group>
@@ -137,8 +137,12 @@
 
 <script>
 export default {
+  mounted () {
+    this.load = true
+  },
   data () {
     return {
+      load: false,
       textTop: ['H', 'i', 'r', 'o', "'", 's'],
       textBottom: ['P', 'o', 'r', 't', 'f', 'o', 'l', 'i', 'o']
     }
