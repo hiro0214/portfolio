@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <component :is="currentView"></component>
+    <component :is="currentView" />
 
   </div>
 </template>
