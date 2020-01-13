@@ -15,6 +15,11 @@
             <td>{{ workShow.text }}</td>
           </tr>
 
+          <tr>
+            <th>作成に至った経緯</th>
+            <td>{{ workShow.back }}</td>
+          </tr>
+
           <tr v-if="$store.state.work.work.title === '某フリマアプリサイト'">
             <th>ログイン方法</th>
             <td>サイトにはBasic認証がかかっています。<br>ID: mercari<br>Pass: 1031<br><br><b>テストユーザーアカウント</b><br>メールアドレス: 222@mercari.com<br>パスワード: 12345678</td>

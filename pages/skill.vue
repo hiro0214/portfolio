@@ -67,12 +67,16 @@
 
     <div class="skill-bottom">
       <div class="skill-bottom-center">
-        <div v-for="content in contents" :key="content">
-          <img :src="content.icon">
-          <br>
-          <span>{{ content.title }}</span>
-          <p>・{{ content.text1 }}</p>
-        </div>
+        <p>スキルセット</p>
+        <ul>
+          <li v-for="content in contents" :key="content">
+            <img :src="content.icon">
+            <b>{{ content.title }}</b>
+            <ul>
+              <li v-for="text in content.text" :key="text">{{ text }}</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -84,12 +88,10 @@ export default {
   data () {
     return {
       contents: [
-        { title: 'HTML/CSS', icon: require('~/assets/html-css.png'), text1: 'レスポンシブ対応可能'},
-        { title: 'JavaScript', icon: require('~/assets/js.png'), text1: 'jQuery➡︎Ajax可'},
-        { title: 'Ruby', icon: require('~/assets/ruby.jpeg'), text1: 'ddd'},
-        { title: 'PHP', icon: require('~/assets/php.png'), text1: 'eee'},
-        { title: 'AWS', icon: require('~/assets/aws.jpg'), text1: 'fff'},
-        { title: 'SQL', icon: require('~/assets/sql.png'), text1: 'ggg'}
+        { title: 'HTML/CSS', icon: require('~/assets/web.png'), text: ["Sassを用いてのcss設計", "レスポンシブ対応", ""]},
+        { title: 'JavaScript', icon: require('~/assets/js.png'), text: ["jQueryを用いてシンプルなアクションからAjax通信など", "Vue.js(Nuxt.js)を用いてSPAの開発", ""]},
+        { title: 'バックエンド', icon: require('~/assets/db.png'), text: ["Ruby on Railsを用いたCRUD機能", "バリデーションや単体テストの実装", ""]},
+        { title: 'ツール', icon: require('~/assets/tool.png'), text: ["SSH、Nginx、Unicornを利用したAWSの経験", "Firebaseによるデータの管理", "githubを用いてのチーム開発経験"]}
       ]
     }
   }
@@ -251,35 +253,47 @@ export default {
   }
 
   &-bottom {
-    background:rgb(24, 116, 62);
+    width:80%;
+    margin:0 auto 40px;
+    background:rgb(255, 94, 45);
     padding:60px 0;
     &-center {
       width:85%;
-      padding: 30px 0;
       margin:0 auto;
-      background:rgb(238, 238, 238);
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      div {
-        width:23%;
-        height:300px;
-        background:#fff;
-        margin:30px 20px;
-        padding:20px;
-        border:solid 1px;
+      background:rgb(245, 245, 245);
+      > p {
+        width:75%;
+        font-size:20px;
+        padding:20px 0 10px;
+        margin:0 auto;
         text-align:center;
-        img {
-          width:85%;
-          height:150px;
-        }
-        span {
-          font-weight:600;
-        }
-        p {
-          width:100%;
-          text-align:left;
-          word-break:break-all;
+        border-bottom:solid 1px;
+        font-weight:600;
+      }
+      > ul {
+        display:flex;
+        flex-wrap:wrap;
+        list-style:none;
+        justify-content: center;
+        > li {
+          width:35%;
+          margin:30px 20px;
+          text-align:center;
+          > b {
+            font-size:17px;
+            display:block;
+            margin:10px 0 5px;
+          }
+          > ul {
+            width:80%;
+            margin:0 auto;
+            text-align:left;
+            word-break:break-all;
+            > li {
+              color:rgb(50,50,50);
+              font-size:15px;
+            }
+          }
         }
       }
     }
