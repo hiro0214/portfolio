@@ -65,20 +65,22 @@
       </div>
     </div>
 
-    <div class="skill-bottom">
-      <div class="skill-bottom-center">
-        <p>スキルセット</p>
-        <ul>
-          <li v-for="content in contents" :key="content">
-            <img :src="content.icon">
-            <b>{{ content.title }}</b>
-            <ul>
-              <li v-for="text in content.text" :key="text">{{ text }}</li>
-            </ul>
-          </li>
-        </ul>
+    <transition name="skill-bottom" appear>
+      <div class="skill-bottom">
+        <div class="skill-bottom-center">
+          <p>スキルセット</p>
+          <ul>
+            <li v-for="content in contents" :key="content">
+              <img :src="content.icon">
+              <b>{{ content.title }}</b>
+              <ul>
+                <li v-for="text in content.text" :key="text">{{ text }}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </transition>
 
   </div>
 </template>
@@ -253,12 +255,11 @@ export default {
   }
 
   &-bottom {
-    width:80%;
+    width:85%;
     margin:0 auto 40px;
     background:rgb(255, 94, 45);
-    padding:60px 0;
+    padding:60px;
     &-center {
-      width:85%;
       margin:0 auto;
       background:rgb(245, 245, 245);
       > p {
@@ -285,7 +286,7 @@ export default {
             margin:10px 0 5px;
           }
           > ul {
-            width:80%;
+            width:70%;
             margin:0 auto;
             text-align:left;
             word-break:break-all;
@@ -295,6 +296,16 @@ export default {
             }
           }
         }
+      }
+    }
+    &-enter {
+      opacity:0;
+      &-to {
+        opacity:1;
+      }
+      &-active {
+        transition:1s;
+        transition-delay:3.6s;
       }
     }
   }

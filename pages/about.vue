@@ -123,9 +123,9 @@
         }
       }
       > p {
-        font-size:20px;
+        font-size:18px;
         &::first-letter {
-          font-size:28px;
+          font-size:26px;
           font-weight:600;
         }
       }
