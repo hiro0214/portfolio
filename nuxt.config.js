@@ -43,6 +43,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/dotenv'
   ],
   /*
   ** vuetify module configuration

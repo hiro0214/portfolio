@@ -16,4 +16,3 @@ if (!firebase.apps.length) {
 }
 
 export const functions = firebase.functions();
-// export default firebase

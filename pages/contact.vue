@@ -102,7 +102,6 @@ export default {
     sendMail: function () {
       if (this.$refs.form.validate()) {
         const mailer = functions.httpsCallable('sendMail')
-
         mailer(this.contactForm)
           .then(() => {
             this.formReset()
@@ -114,6 +113,7 @@ export default {
     },
     formReset: function () {
       this.$refs.form.reset()
+      alert('送信しました')
     }
   }
 }
