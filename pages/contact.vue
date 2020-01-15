@@ -14,11 +14,34 @@
       <v-flex>
         <v-card>
           <v-card-text>
-            <v-form>
-              <v-text-field v-model="name" label="お名前" />
-              <v-text-field v-model="email" label="メールアドレス" />
-              <v-textarea label="内容" />
-              <v-btn>送信</v-btn>
+
+            <v-form ref="form" v-model="contactFormValidation.valid" lazy-validation>
+              <v-text-field
+                v-model="contactForm.name"
+                :rules="contactFormValidation.nameRules"
+                label="名前"
+                required
+              ></v-text-field>
+              <v-text-field
+                v-model="contactForm.email"
+                :rules="contactFormValidation.emailRules"
+                label="メールアドレス"
+                required
+              ></v-text-field>
+              <v-textarea
+                v-model="contactForm.contents"
+                :rules="contactFormValidation.contentsRules"
+                label="内容"
+                required
+              ></v-textarea>
+              <v-btn
+                :disabled="!contactFormValidation.valid"
+                @click="sendMail()"
+                block
+                large
+                class="mt-4 font-weight-bold"
+              >送信
+              </v-btn>
             </v-form>
           </v-card-text>
         </v-card>
@@ -57,3 +80,42 @@
 }
 
 </style>
+
+<script>
+import { functions } from '@/plugins/firebase'
+
+export default {
+  data: () => ({
+    contactForm: {
+      name: '',
+      contents: '',
+      email: ''
+    },
+    contactFormValidation: {
+      valid: false,
+      nameRules: [v => !!v || '名前は必須項目です'],
+      emailRules: [v => !!v || 'メールアドレスは必須項目です'],
+      contentsRules: [v => !!v || '内容は必須項目です']
+    }
+  }),
+  methods: {
+    sendMail: function () {
+      if (this.$refs.form.validate()) {
+        const mailer = functions.httpsCallable('sendMail')
+
+        mailer(this.contactForm)
+          .then(() => {
+            this.formReset()
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      }
+    },
+    formReset: function () {
+      this.$refs.form.reset()
+    }
+  }
+}
+
+</script>
