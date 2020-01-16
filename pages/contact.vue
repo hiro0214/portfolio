@@ -1,54 +1,56 @@
 <template>
-  <div class="contact">
+
+  <v-app class="contact">
 
     <div class="contact-header">
-      <div class="title">
-        <transition name="title" appear>
+      <div class="contact-title">
+        <transition name="contact-title" appear>
           <h2>Contact</h2>
         </transition>
       </div>
     </div>
 
     <div class="contact-contents">
-      <h3>ご要件がある方はこちらにお願いいたします。</h3>
-      <v-flex>
-        <v-card>
-          <v-card-text>
+      <p>ご要件がある方はこちらにお願いいたします。</p>
 
-            <v-form ref="form" v-model="contactFormValidation.valid" lazy-validation>
-              <v-text-field
-                v-model="contactForm.name"
-                :rules="contactFormValidation.nameRules"
-                label="名前"
-                required
-              ></v-text-field>
-              <v-text-field
-                v-model="contactForm.email"
-                :rules="contactFormValidation.emailRules"
-                label="メールアドレス"
-                required
-              ></v-text-field>
-              <v-textarea
-                v-model="contactForm.contents"
-                :rules="contactFormValidation.contentsRules"
-                label="内容"
-                required
-              ></v-textarea>
-              <v-btn
-                :disabled="!contactFormValidation.valid"
-                @click="sendMail()"
-                block
-                large
-                class="mt-4 font-weight-bold"
-              >送信
-              </v-btn>
-            </v-form>
-          </v-card-text>
-        </v-card>
-      </v-flex>
+        <v-flex>
+          <v-card>
+            <v-card-text>
+              <v-form ref="form" v-model="contactFormValidation.valid" lazy-validation>
+                <v-text-field
+                  v-model="contactForm.name"
+                  :rules="contactFormValidation.nameRules"
+                  label="名前"
+                  required
+                ></v-text-field>
+                <v-text-field
+                  v-model="contactForm.email"
+                  :rules="contactFormValidation.emailRules"
+                  label="メールアドレス"
+                  required
+                ></v-text-field>
+                <v-textarea
+                  v-model="contactForm.contents"
+                  :rules="contactFormValidation.contentsRules"
+                  label="内容"
+                  required
+                ></v-textarea>
+                <v-btn
+                  :disabled="!contactFormValidation.valid"
+                  @click="sendMail()"
+                  block
+                  :color="this.$vuetify.theme.themes.dark.primary"
+                  class="contact-submit"
+                >送信
+                </v-btn>
+              </v-form>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+
     </div>
 
-  </div>
+  </v-app>
 </template>
 
 <style lang="scss" scoped>
@@ -67,15 +69,23 @@
     min-height:500px;
     padding:40px;
     margin:40px auto 0;
-    h3 {
+    p {
       text-align:center;
+      font-weight:600;
       margin-bottom:20px;
       color:rgb(226, 226, 226);
     }
   }
+
   .flex {
     width:60%;
     margin:0 auto;
+  }
+
+  &-submit {
+    margin-top:20px;
+    color:#fff;
+    font-weight:600;
   }
 }
 
@@ -93,9 +103,18 @@ export default {
     },
     contactFormValidation: {
       valid: false,
-      nameRules: [v => !!v || '名前は必須項目です'],
-      emailRules: [v => !!v || 'メールアドレスは必須項目です'],
-      contentsRules: [v => !!v || '内容は必須項目です']
+      nameRules: [
+        v => !!v || '名前は必須項目です',
+        v => v.length <= 20 || "20文字以内で入力してください"
+      ],
+      emailRules: [
+        v => !!v || 'メールアドレスは必須項目です',
+        v => /.+@.+/.test(v) || 'メールアドレスを正しく入力してください'
+      ],
+      contentsRules: [
+        v => !!v || '内容は必須項目です',
+        v => v.length <= 2000 || "2000文字以内で入力してください"
+      ]
     }
   }),
   methods: {
