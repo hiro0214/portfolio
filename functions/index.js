@@ -17,15 +17,15 @@ const mailTransport = nodemailer.createTransport({
 const adminContents = data => {
   return `以下内容でホームページよりお問い合わせを受けました。
 
-お名前：
-${data.name}
+  お名前：
+  ${data.name}
 
-メールアドレス：
-${data.email}
+  メールアドレス：
+  ${data.email}
 
-内容：
-${data.contents}
-`;
+  内容：
+  ${data.contents}
+  `;
 };
 
 exports.sendMail = functions.https.onCall((data, context) => {
