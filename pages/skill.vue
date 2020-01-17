@@ -104,6 +104,7 @@ export default {
 
 .skill {
   padding-top:80px;
+  text-align:center;
   &-header {
     background:#102942;
     color:rgb(233, 233, 233);
@@ -112,7 +113,8 @@ export default {
   }
   > h3 {
     margin: 40px 0 30px;
-    text-align:center;
+    display:inline-block;
+    border-bottom:solid 1px;
   }
   &-main {
     display:flex;
@@ -137,7 +139,7 @@ export default {
         content:"";
         display:inline-block;
         width:100%;
-        border:solid 1px rgb(199, 199, 199);
+        border:solid 1px rgb(180, 180, 180);
         position:relative;
         bottom:10px;
       }
@@ -145,7 +147,7 @@ export default {
         content:"";
         display:inline-block;
         width:120px;
-        border:solid 1px rgb(179, 179, 179);
+        border:solid 1px rgb(180, 180, 180);
         transform: rotate(40deg);
         position:absolute;
         top:70px;
@@ -159,7 +161,7 @@ export default {
     }
     &-center {
       height:750px;
-      border-right:solid 4px rgb(179, 179, 179);
+      border-right:solid 4px rgb(180, 180, 180);
       margin:0 90px;
       &-enter {
         height:0px;
@@ -224,7 +226,7 @@ export default {
           content:"";
           display:inline-block;
           width:120px;
-          border:solid 1px rgb(179, 179, 179);
+          border:solid 1px rgb(180, 180, 180);
           transform: rotate(-40deg);
           position:absolute;
           top:70px;

@@ -76,6 +76,7 @@
 
 .contact {
   padding-top:80px;
+  background:rgb(240, 240, 240);
   &-header {
     background:#102942;
     color:rgb(233, 233, 233);
@@ -83,17 +84,17 @@
     line-height:150px;
   }
   &-contents {
-    background:#577da1;
+    background:rgb(200, 200, 200);
     width:60%;
     min-height:500px;
     padding:40px;
     margin:40px auto 0;
     p {
       font-size:20px;
+      color:rgb(50, 50, 50);
       text-align:center;
       font-weight:600;
       margin-bottom:20px;
-      color:#fff;
     }
   }
 
