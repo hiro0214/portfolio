@@ -1,0 +1,198 @@
+// 〜479px：SP縦
+@media screen  and (max-width:479px) {
+  body {
+    background:rgb(255, 221, 221);
+
+  .default {
+    header {
+      width:100%;
+      > ul {
+        height:45px;
+        padding-top:12px;
+        justify-content:space-between;
+        > li {
+          font-size:14px;
+          margin:0 10px;
+        }
+      }
+    }
+
+    .home {
+      .right-box {
+        &-text {
+          left:10%;
+        }
+        span {
+          font-size:55px;
+        }
+      }
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+  }
+}
+
+
+// 480px〜599px：SP横
+@media screen and (min-width:480px) and (max-width:599px) {
+  body {
+    background:rgb(225, 225, 255);
+
+  .default {
+    header {
+      width:100%;
+      > ul {
+        height:45px;
+        padding-top:12px;
+        justify-content:space-between;
+        > li {
+          font-size:16px;
+        }
+      }
+    }
+
+    .home {
+      .right-box {
+        &-text {
+          left:10%;
+        }
+        span {
+          font-size:65px;
+        }
+      }
+    }
+
+  }
+
+
+
+
+
+
+
+
+  }
+}
+
+
+// 600px〜959px：タブレット
+@media screen and (min-width:600px) and (max-width:959px) {
+  body {
+    background:rgb(214, 250, 214);
+
+  .default {
+    header {
+      > ul {
+        height:50px;
+        padding-top:15px;
+        > li {
+          font-size:14px;
+        }
+      }
+    }
+
+    .home {
+      .right-box {
+        &-text {
+          left:35%;
+        }
+        span {
+          font-size:75px;
+        }
+      }
+    }
+  }
+
+
+
+  }
+}
+
+
+// 960px〜1279px：小型PC
+@media screen and (min-width:960px) and (max-width:1279px) {
+  body {
+    background:rgb(255, 255, 220);
+
+  .default {
+    .right-box {
+      span {
+        font-size:90px;
+      }
+    }
+  }
+
+
+
+
+
+
+  }
+}
+
+
+// 1280px〜：大型PC
+@media screen and (min-width:1280px) {
+  body {
+    background:rgb(255, 214, 255);
+  }
+}
+
+
+@media screen and (orientation: landscape) {
+  /* 横向きの場合のスタイル */
+
+  @media screen and (min-width:480px) and (max-width:599px) {
+
+    .right-box {
+      &-text {
+        left:50% !important;
+      }
+      span {
+        font-size:50px !important;
+      }
+    }
+  }
+
+  @media screen and (min-width:600px) and (max-width:959px) {
+
+    .right-box {
+      &-text {
+        left:50% !important;
+      }
+      span {
+        font-size:60px !important;
+      }
+    }
+  }
+
+}
+
+
+
+
+@media screen and (orientation: portrait) {
+  /* 縦向きの場合のスタイル */
+
+  .default {
+    .home {
+      .left-box {
+        background-size:100vw 60vh;
+        width:100vw;
+        height:60vh;
+      }
+      .right-box-text {
+        top:15%;
+      }
+    }
+  }
+}

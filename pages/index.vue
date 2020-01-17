@@ -45,19 +45,21 @@
     width:70vw;
     height:80vh;
     position:absolute;
+    overflow:hidden;
     bottom:0;
     z-index:30;
     &-animate {
       width:100%;
       height:100%;
-      transform: translate3d(1050px, 0, 0);
+      position:absolute;
+      left:100%;
       background:#102942;
     }
   }
   &-enter {
-    transform: translate3d(0, 0, 0);
+    left:0;
     &-to {
-      transform: translate3d(1050px, 0, 0);
+      left:100%;
     }
     &-active {
       transition: 2s cubic-bezier(.16,.97,.89,.96);
