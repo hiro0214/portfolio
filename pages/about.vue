@@ -1,7 +1,7 @@
 <template>
   <div class="about">
 
-    <div class="about-header">
+    <div class="contents-header">
       <div class="title">
         <transition name="title" appear>
           <h2>My Profile</h2>
@@ -61,12 +61,6 @@
 
 .about {
   padding-top:80px;
-  &-header {
-    background:#102942;
-    color:rgb(233, 233, 233);
-    height:150px;
-    line-height:150px;
-  }
   &-main {
     background:rgb(240, 240, 240);
     padding: 20px 120px 50px;

@@ -1,7 +1,7 @@
 <template>
   <div class="skill">
 
-    <div class="skill-header">
+    <div class="contents-header">
       <div class="title">
         <transition name="title" appear>
           <h2>SKILL</h2>
@@ -105,12 +105,6 @@ export default {
 .skill {
   padding-top:80px;
   text-align:center;
-  &-header {
-    background:#102942;
-    color:rgb(233, 233, 233);
-    height:150px;
-    line-height:150px;
-  }
   > h3 {
     margin: 40px 0 30px;
     display:inline-block;

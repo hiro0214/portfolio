@@ -17,6 +17,14 @@
       }
     }
 
+    .contents-header {
+      height:100px !important;
+      line-height:100px !important;
+      h2 {
+        font-size:36px !important;
+      }
+    }
+
     .home {
       .right-box {
         &-text {
@@ -28,16 +36,29 @@
       }
     }
 
+    .about {
+    }
+
+    .skill {
+    }
+
+    .work {
+    }
+
+    .contact {
+      &-contents {
+        width:90%;
+        p {
+          font-size:12px;
+        }
+      }
+      .flex {
+        width:100%;
+      }
+    }
+
+
   }
-
-
-
-
-
-
-
-
-
   }
 }
 
@@ -60,6 +81,14 @@
       }
     }
 
+    .contents-header {
+      height:100px !important;
+      line-height:100px !important;
+      h2 {
+        font-size:36px !important;
+      }
+    }
+
     .home {
       .right-box {
         &-text {
@@ -71,15 +100,29 @@
       }
     }
 
+    .about {
+    }
+
+    .skill {
+    }
+
+    .work {
+    }
+
+    .contact {
+      &-contents {
+        width:90%;
+        p {
+          font-size:14px;
+        }
+      }
+      .flex {
+        width:100%;
+      }
+    }
+
+
   }
-
-
-
-
-
-
-
-
   }
 }
 
@@ -100,6 +143,11 @@
       }
     }
 
+    .contents-header {
+      height:120px !important;
+      line-height:120px !important;
+    }
+
     .home {
       .right-box {
         &-text {
@@ -110,10 +158,24 @@
         }
       }
     }
+
+    .about {
+    }
+
+    .skill {
+    }
+
+    .work {
+    }
+
+    .contact {
+      &-contents {
+        width:80%;
+      }
+    }
+
+
   }
-
-
-
   }
 }
 
@@ -124,18 +186,29 @@
     background:rgb(255, 255, 220);
 
   .default {
-    .right-box {
-      span {
-        font-size:90px;
+    .home {
+      .right-box {
+        span {
+          font-size:90px;
+        }
       }
     }
+
+    .about {
+    }
+
+    .skill {
+    }
+
+    .work {
+    }
+
+    .contact {
+    }
+
+
+
   }
-
-
-
-
-
-
   }
 }
 
@@ -146,6 +219,10 @@
     background:rgb(255, 214, 255);
   }
 }
+
+
+
+
 
 
 @media screen and (orientation: landscape) {

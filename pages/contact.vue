@@ -2,7 +2,7 @@
 
   <v-app class="contact">
 
-    <div class="contact-header">
+    <div class="contents-header">
       <div class="contact-title">
         <transition name="contact-title" appear>
           <h2>Contact</h2>
@@ -11,7 +11,7 @@
     </div>
 
     <div class="contact-contents">
-      <p>ご要件がある方はこちらにお願いいたします。</p>
+      <p>ご要件がある方はこちらにお願い致します。</p>
 
         <v-flex>
           <v-card>
@@ -77,12 +77,6 @@
 .contact {
   padding-top:80px;
   background:rgb(240, 240, 240);
-  &-header {
-    background:#102942;
-    color:rgb(233, 233, 233);
-    height:150px;
-    line-height:150px;
-  }
   &-contents {
     background:rgb(200, 200, 200);
     width:60%;
@@ -90,7 +84,7 @@
     padding:40px;
     margin:40px auto 0;
     p {
-      font-size:20px;
+      font-size:18px;
       color:rgb(50, 50, 50);
       text-align:center;
       font-weight:600;
@@ -99,7 +93,7 @@
   }
 
   .flex {
-    width:60%;
+    width:80%;
     margin:0 auto;
   }
 
