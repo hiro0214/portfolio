@@ -145,9 +145,9 @@ export default {
   data () {
     return {
       contents: [
-        { title: 'HTML/CSS', icon: require('~/assets/web.png'), text: ["Sassを用いてのcss設計", "レスポンシブ対応", ""]},
-        { title: 'JavaScript', icon: require('~/assets/js.png'), text: ["jQueryを用いてシンプルなアクションからAjax通信など", "Vue.js(Nuxt.js)を用いてSPAの開発", ""]},
-        { title: 'バックエンド', icon: require('~/assets/db.png'), text: ["Ruby on Railsを用いたCRUD機能", "バリデーションや単体テストの実装", ""]},
+        { title: 'HTML/CSS', icon: require('~/assets/web.png'), text: ["Sassを用いてのcss設計", "レスポンシブ対応(PC、タブレット、スマホ)", "LPサイトの模写経験"]},
+        { title: 'JavaScript', icon: require('~/assets/js.png'), text: ["jQueryを用いたシンプルなアクションからAjax通信など", "Vue.js(Nuxt.js)を用いてSPAの開発"]},
+        { title: 'バックエンド', icon: require('~/assets/db.png'), text: ["Ruby on Railsを用いたCRUD機能", "バリデーションや単体テストの実装"]},
         { title: 'ツール', icon: require('~/assets/tool.png'), text: ["SSH、Nginx、Unicornを利用したAWSの経験", "Firebaseによるデータの管理", "githubを用いてのチーム開発経験"]}
       ]
     }
