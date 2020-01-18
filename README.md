@@ -1,22 +1,24 @@
-# portfolio
+# 概要
+- Nuxt.jsを使用して自身のポートフォリオサイトとして当サイトを作成しました。
 
-> My grand Nuxt.js project
+## 工夫したところ
+- アニメーションを使用して、ページの表示を動的にしたこと。
+- WORKのページでリストをクリックすることで、コンポーネントを動的に切り替えたこと。
+  - リストをクリックした時にv-forで展開表示しているリストのインデックス番号を取得し、対応した詳細ページのコンポーネントを表示するようにしています。
+- お問い合わせフォームを作成したこと。
+  - お問い合わせフォームに入力されたデータを私のメールアドレスに自動送信されるように関数を作成しました。
 
-## Build Setup
+## 使用したライブラリ、プラグイン
+- Sass
+  - サイトのコーディングの際に使用しました。
+- vue-mq
+  - レスポンシブ対応をする時に、ブレークポイント毎の表示を変更する際に使用しました。
+- Firebase
+  - お問い合わせフォームを作成する際にFirebaseのFunctionsを使用しました。
+- dotenv
+  - Firebaseの設定を環境変数にする際に使用しました。
 
-``` bash
-# install dependencies
-$ npm run install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## その他
+- 制作期間
+  - 7日ほど

@@ -129,7 +129,7 @@
               <img :src="content.icon">
               <b>{{ content.title }}</b>
               <ul>
-                <li v-for="text in content.text" :key="text">{{ text }}</li>
+                <li v-for="text in content.text" :key="text.title">{{ text }}</li>
               </ul>
             </li>
           </ul>
