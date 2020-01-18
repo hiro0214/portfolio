@@ -37,6 +37,38 @@
     }
 
     .about {
+      &-main {
+        padding:20px 30px 40px;
+        display:block;
+        &-left {
+          margin:0 auto;
+          padding-top:0px;
+          .main-img {
+            width:180px;
+            height:180px;
+          }
+          .left-info {
+            margin-top:10px;
+            > span {
+              font-size:16px;
+            }
+          }
+        }
+        &-right {
+          width:100%;
+          margin-left:0px;
+          > h3 {
+            font-size:22px;
+          }
+          > p {
+            font-size:14px;
+            &::first-letter {
+              font-size:18px;
+              font-weight:600;
+            }
+          }
+        }
+      }
     }
 
     .skill {
@@ -101,6 +133,35 @@
     }
 
     .about {
+      &-main {
+        padding:20px 30px 40px;
+        display:block;
+        &-left {
+          margin:0 auto;
+          padding-top:0px;
+          .main-img {
+            width:200px;
+            height:200px;
+          }
+          .left-info {
+            margin-top:10px;
+          }
+        }
+        &-right {
+          width:100%;
+          margin-left:0px;
+          > h3 {
+            font-size:24px;
+          }
+          > p {
+            font-size:16px;
+            &::first-letter {
+              font-size:20px;
+              font-weight:600;
+            }
+          }
+        }
+      }
     }
 
     .skill {
@@ -146,6 +207,9 @@
     .contents-header {
       height:120px !important;
       line-height:120px !important;
+      h2 {
+        font-size:40px !important;
+      }
     }
 
     .home {
@@ -160,6 +224,18 @@
     }
 
     .about {
+      &-main {
+        padding:20px 30px 40px;
+        &-left {
+          .main-img {
+            width:180px;
+            height:180px;
+          }
+        }
+        &-right {
+          margin-left:20px;
+        }
+      }
     }
 
     .skill {
