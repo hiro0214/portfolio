@@ -35,7 +35,7 @@
 
 .home {
   width:100vw;
-  height:100vh;
+  height: calc( 100vh - 60px );
 }
 
 .left {
