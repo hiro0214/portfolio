@@ -26,12 +26,14 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/assets/css/main.scss'
+    '~/assets/css/main.scss',
+    '~/assets/css/responsive.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/vue-mq'
   ],
   /*
   ** Nuxt.js dev-modules

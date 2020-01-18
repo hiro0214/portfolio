@@ -16,7 +16,8 @@
     "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.2"
+    "style-loader": "^1.0.2",
+    "vue-mq": "^1.0.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0"

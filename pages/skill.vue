@@ -1,7 +1,7 @@
 <template>
   <div class="skill">
 
-    <div class="skill-header">
+    <div class="contents-header">
       <div class="title">
         <transition name="title" appear>
           <h2>SKILL</h2>
@@ -12,7 +12,8 @@
     <transition name="skill-main" appear>
       <h3>プログラミングの学習履歴</h3>
     </transition>
-    <div class="skill-main">
+
+    <mq-layout mq="lg" class="skill-main">
       <div class="skill-main-left">
 
         <transition name="skill-main-left-first" appear>
@@ -63,7 +64,61 @@
           </div>
         </transition>
       </div>
-    </div>
+    </mq-layout>
+
+
+    <mq-layout mq="sm" class="skill-main">
+
+      <transition name="skill-main-center" appear>
+        <div class="skill-main-center"></div>
+      </transition>
+
+      <div class="skill-main-right">
+        <transition name="skill-main-left-first" appear>
+          <div>
+            <p>2019年 4月~ : HTML/CSS/JavaScript</p>
+            <span>Progate、ドットインストールにて基礎を学ぶ</span>
+          </div>
+        </transition>
+
+        <transition name="skill-main-right-first" appear>
+          <div>
+            <p>2019年 6月~ : PHP</p>
+            <span>PHPの参考書を3冊購入し学ぶ</span>
+          </div>
+        </transition>
+
+        <transition name="skill-main-left-second" appear>
+          <div>
+            <p>2019年 8月~ : Ruby on Rails/jQuery</p>
+            <span>スクールに入り、Webアプリを作成する</span>
+          </div>
+        </transition>
+
+        <transition name="skill-main-left-third" appear>
+          <div>
+            <p>2019年 9月~ : AWS/Python</p>
+            <span>スクールにてAWSを学びデプロイを行う<br>pythonの参考書を2冊購入し学ぶ</span><br>
+          </div>
+        </transition>
+
+        <transition name="skill-main-left-fourth" appear>
+          <div>
+            <p>2019年 10月~ : スクールの最終課題</p>
+            <span>某フリマサイトのクローンサイトを作成する</span>
+          </div>
+        </transition>
+
+        <transition name="skill-main-right-second" appear>
+          <div>
+            <p>2019年 11月~ : 個人アプリの作成/Vue.js</p>
+            <span>Railsを用いてオリジナルのアプリを作成<br>Vue.jsの参考書を購入し学ぶ<br>Nuxt.jsを勉強しアプリの作成を行う</span>
+          </div>
+        </transition>
+
+      </div>
+    </mq-layout>
+
 
     <transition name="skill-bottom" appear>
       <div class="skill-bottom">
@@ -104,15 +159,11 @@ export default {
 
 .skill {
   padding-top:80px;
-  &-header {
-    background:#102942;
-    color:rgb(233, 233, 233);
-    height:150px;
-    line-height:150px;
-  }
+  text-align:center;
   > h3 {
     margin: 40px 0 30px;
-    text-align:center;
+    display:inline-block;
+    border-bottom:solid 1px;
   }
   &-main {
     display:flex;
@@ -137,7 +188,7 @@ export default {
         content:"";
         display:inline-block;
         width:100%;
-        border:solid 1px rgb(199, 199, 199);
+        border:solid 1px rgb(180, 180, 180);
         position:relative;
         bottom:10px;
       }
@@ -145,7 +196,7 @@ export default {
         content:"";
         display:inline-block;
         width:120px;
-        border:solid 1px rgb(179, 179, 179);
+        border:solid 1px rgb(180, 180, 180);
         transform: rotate(40deg);
         position:absolute;
         top:70px;
@@ -159,7 +210,7 @@ export default {
     }
     &-center {
       height:750px;
-      border-right:solid 4px rgb(179, 179, 179);
+      border-right:solid 4px rgb(180, 180, 180);
       margin:0 90px;
       &-enter {
         height:0px;
@@ -224,7 +275,7 @@ export default {
           content:"";
           display:inline-block;
           width:120px;
-          border:solid 1px rgb(179, 179, 179);
+          border:solid 1px rgb(180, 180, 180);
           transform: rotate(-40deg);
           position:absolute;
           top:70px;
@@ -310,7 +361,6 @@ export default {
     }
   }
 }
-
 
 .first {
   margin-top:100px;

@@ -42,9 +42,12 @@ export default {
   &-main {
     padding:40px;
     background:rgb(240, 240, 240);
+    text-align:center;
+    overflow:hidden;
     h3 {
-      text-align:center;
-      margin-bottom:30px;
+      margin-bottom: 30px;
+      display:inline-block;
+      border-bottom:solid 1px;
     }
     &-list {
       width:75%;
@@ -56,7 +59,7 @@ export default {
         flex-wrap:wrap;
         list-style:none;
         li {
-          width:26%;
+          width:250px;
           min-height:250px;
           margin:20px auto;
           cursor:pointer;
