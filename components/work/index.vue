@@ -43,6 +43,7 @@ export default {
     padding:40px;
     background:rgb(240, 240, 240);
     text-align:center;
+    overflow:hidden;
     h3 {
       margin-bottom: 30px;
       display:inline-block;

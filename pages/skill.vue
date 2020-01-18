@@ -12,7 +12,8 @@
     <transition name="skill-main" appear>
       <h3>プログラミングの学習履歴</h3>
     </transition>
-    <div class="skill-main">
+
+    <mq-layout mq="lg" class="skill-main">
       <div class="skill-main-left">
 
         <transition name="skill-main-left-first" appear>
@@ -63,7 +64,61 @@
           </div>
         </transition>
       </div>
-    </div>
+    </mq-layout>
+
+
+    <mq-layout mq="sm" class="skill-main">
+
+      <transition name="skill-main-center" appear>
+        <div class="skill-main-center"></div>
+      </transition>
+
+      <div class="skill-main-right">
+        <transition name="skill-main-left-first" appear>
+          <div>
+            <p>2019年 4月~ : HTML/CSS/JavaScript</p>
+            <span>Progate、ドットインストールにて基礎を学ぶ</span>
+          </div>
+        </transition>
+
+        <transition name="skill-main-right-first" appear>
+          <div>
+            <p>2019年 6月~ : PHP</p>
+            <span>PHPの参考書を3冊購入し学ぶ</span>
+          </div>
+        </transition>
+
+        <transition name="skill-main-left-second" appear>
+          <div>
+            <p>2019年 8月~ : Ruby on Rails/jQuery</p>
+            <span>スクールに入り、Webアプリを作成する</span>
+          </div>
+        </transition>
+
+        <transition name="skill-main-left-third" appear>
+          <div>
+            <p>2019年 9月~ : AWS/Python</p>
+            <span>スクールにてAWSを学びデプロイを行う<br>pythonの参考書を2冊購入し学ぶ</span><br>
+          </div>
+        </transition>
+
+        <transition name="skill-main-left-fourth" appear>
+          <div>
+            <p>2019年 10月~ : スクールの最終課題</p>
+            <span>某フリマサイトのクローンサイトを作成する</span>
+          </div>
+        </transition>
+
+        <transition name="skill-main-right-second" appear>
+          <div>
+            <p>2019年 11月~ : 個人アプリの作成/Vue.js</p>
+            <span>Railsを用いてオリジナルのアプリを作成<br>Vue.jsの参考書を購入し学ぶ<br>Nuxt.jsを勉強しアプリの作成を行う</span>
+          </div>
+        </transition>
+
+      </div>
+    </mq-layout>
+
 
     <transition name="skill-bottom" appear>
       <div class="skill-bottom">
@@ -306,7 +361,6 @@ export default {
     }
   }
 }
-
 
 .first {
   margin-top:100px;

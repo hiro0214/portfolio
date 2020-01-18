@@ -10,64 +10,66 @@
       </div>
     </div>
 
-    <div class="contact-contents">
-      <p>ご要件がある方はこちらにお願い致します。</p>
+    <transition name="contact-contents" appear>
+      <div class="contact-contents">
+        <p>ご要件がある方はこちらにお願い致します。</p>
 
-        <v-flex>
-          <v-card>
-            <v-card-text>
-              <v-form ref="form" v-model="contactFormValidation.valid" lazy-validation>
-                <v-text-field
-                  v-model="contactForm.name"
-                  :rules="contactFormValidation.nameRules"
-                  label="名前"
-                  required
-                ></v-text-field>
-                <v-text-field
-                  v-model="contactForm.email"
-                  :rules="contactFormValidation.emailRules"
-                  label="メールアドレス"
-                  required
-                ></v-text-field>
-                <v-textarea
-                  v-model="contactForm.contents"
-                  :rules="contactFormValidation.contentsRules"
-                  label="内容"
-                  required
-                ></v-textarea>
-                <v-btn
-                  :disabled="!contactFormValidation.valid"
-                  @click="clickSubmit()"
-                  block
-                  color="info"
-                  class="contact-submit"
-                >送信
-                </v-btn>
-              </v-form>
-            </v-card-text>
-
-            <v-snackbar v-model="snackbar.show" :color="snackbar.color" :timeout="5000" class="font-weight-bold">
-              {{ snackbar.message }}
-            </v-snackbar>
-
-            <v-dialog v-model="dialog" max-width="400">
-              <v-card>
-                <v-card-title>この内容でお問い合わせをしてもよろしいですか？</v-card-title>
-                <v-card-actions :class="`d-flex justify-center`">
-                  <v-btn color="error" @click="dialog = false" class="font-weight-bold">
-                    キャンセル
+          <v-flex>
+            <v-card>
+              <v-card-text>
+                <v-form ref="form" v-model="contactFormValidation.valid" lazy-validation>
+                  <v-text-field
+                    v-model="contactForm.name"
+                    :rules="contactFormValidation.nameRules"
+                    label="名前"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    v-model="contactForm.email"
+                    :rules="contactFormValidation.emailRules"
+                    label="メールアドレス"
+                    required
+                  ></v-text-field>
+                  <v-textarea
+                    v-model="contactForm.contents"
+                    :rules="contactFormValidation.contentsRules"
+                    label="内容"
+                    required
+                  ></v-textarea>
+                  <v-btn
+                    :disabled="!contactFormValidation.valid"
+                    @click="clickSubmit()"
+                    block
+                    color="info"
+                    class="contact-submit"
+                  >送信
                   </v-btn>
-                  <v-btn color="success" @click="sendMail()" class="font-weight-bold">
-                    送信する
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
+                </v-form>
+              </v-card-text>
 
-          </v-card>
-        </v-flex>
+              <v-snackbar v-model="snackbar.show" :color="snackbar.color" :timeout="5000" class="font-weight-bold">
+                {{ snackbar.message }}
+              </v-snackbar>
 
-    </div>
+              <v-dialog v-model="dialog" max-width="400">
+                <v-card>
+                  <v-card-title>この内容でお問い合わせをしてもよろしいですか？</v-card-title>
+                  <v-card-actions :class="`d-flex justify-center`">
+                    <v-btn color="error" @click="dialog = false" class="font-weight-bold">
+                      キャンセル
+                    </v-btn>
+                    <v-btn color="success" @click="sendMail()" class="font-weight-bold">
+                      送信する
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+
+            </v-card>
+          </v-flex>
+
+      </div>
+    </transition>
 
   </v-app>
 </template>
@@ -89,6 +91,16 @@
       text-align:center;
       font-weight:600;
       margin-bottom:20px;
+    }
+    &-enter {
+      opacity:0;
+      &-to {
+        opacity:1;
+      }
+      &-active {
+        transition:1s;
+        transition-delay: 1.4s;
+      }
     }
   }
 

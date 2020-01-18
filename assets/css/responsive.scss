@@ -1,7 +1,7 @@
 // 〜479px：SP縦
 @media screen  and (max-width:479px) {
   body {
-    background:rgb(255, 221, 221);
+    // background:rgb(255, 221, 221);
 
   .default {
     header {
@@ -72,6 +72,65 @@
     }
 
     .skill {
+      > h3 {
+        margin: 20px 0 10px;
+        font-size:16px;
+      }
+      &-main {
+        width:95%;
+        margin:0 auto;
+        justify-content:normal;
+        p {
+          font-size:13px;
+          &:before {
+            width:60px;
+            transform: rotate(-30deg);
+            top:35px;
+            right:235px;
+          }
+        }
+        span {
+          font-size:11px;
+        }
+        &-center {
+          height:600px;
+          margin:0 50px 0 10px;
+          &-enter {
+            height:0px;
+            &-to {
+              height:600px;
+            }
+          }
+        }
+        &-right {
+          width:240px;
+          height:600px;
+          div {
+            margin-top:30px;
+          }
+        }
+      }
+      &-bottom {
+        width:100%;
+        margin-bottom:0px;
+        padding:30px;
+        &-center {
+          > p {
+            font-size:16px;
+          }
+          > ul > li {
+            width:100%;
+            margin:10px 5px;
+            > b {
+              font-size:15px;
+              margin:5px;
+            }
+            > ul > li {
+              font-size:13px;
+            }
+          }
+        }
+      }
     }
 
     .work {
@@ -123,12 +182,11 @@
           }
         }
       }
-
     }
 
     .contact {
       &-contents {
-        width:90%;
+        width:100%;
         p {
           font-size:12px;
         }
@@ -138,7 +196,6 @@
       }
     }
 
-
   }
   }
 }
@@ -147,7 +204,7 @@
 // 480px〜599px：SP横
 @media screen and (min-width:480px) and (max-width:599px) {
   body {
-    background:rgb(225, 225, 255);
+    // background:rgb(225, 225, 255);
 
   .default {
     header {
@@ -214,6 +271,64 @@
     }
 
     .skill {
+      > h3 {
+        margin: 30px 0 20px;
+      }
+      &-main {
+        width:90%;
+        margin:0 auto;
+        justify-content:normal;
+        p {
+          font-size:16px;
+          &:before {
+            width:120px;
+            transform: rotate(-30deg);
+            top:56px;
+            right:310px;
+          }
+        }
+        span {
+          font-size:13px;
+        }
+        &-center {
+          height:650px;
+          margin:0 100px 0 0;
+          &-enter {
+            height:0px;
+            &-to {
+              height:650px;
+            }
+          }
+        }
+        &-right {
+          width:320px;
+          height:650px;
+          div {
+            margin-top:30px;
+          }
+        }
+      }
+      &-bottom {
+        width:100%;
+        margin-bottom:0px;
+        padding:40px;
+        &-center {
+          > p {
+            font-size:16px;
+          }
+          > ul > li {
+            width:45%;
+            margin:10px 5px;
+            > b {
+              font-size:15px;
+              margin:5px;
+            }
+            > ul > li {
+              font-size:13px;
+            }
+          }
+        }
+      }
     }
 
     .work {
@@ -275,7 +390,6 @@
       }
     }
 
-
   }
   }
 }
@@ -284,7 +398,7 @@
 // 600px〜959px：タブレット
 @media screen and (min-width:600px) and (max-width:959px) {
   body {
-    background:rgb(214, 250, 214);
+    // background:rgb(214, 250, 214);
 
   .default {
     header {
@@ -332,6 +446,44 @@
     }
 
     .skill {
+      &-main {
+        width:80%;
+        margin:0 auto;
+        justify-content:normal;
+        p {
+          &:before {
+            width:120px;
+            transform: rotate(-30deg);
+            top:61px;
+            right:340px;
+          }
+        }
+        &-center {
+          height:700px;
+          margin:0 100px 0 0;
+          &-enter {
+            height:0px;
+            &-to {
+              height:700px;
+            }
+          }
+        }
+        &-right {
+          height:700px;
+          div {
+            margin-top:30px;
+          }
+        }
+      }
+      &-bottom {
+        width:100%;
+        margin-bottom:0px;
+        padding:40px;
+        &-center > ul > li {
+          width:45%;
+          margin:20px 10px;
+        }
+      }
     }
 
     .work {
@@ -363,7 +515,6 @@
       }
     }
 
-
   }
   }
 }
@@ -372,7 +523,7 @@
 // 960px〜1279px：小型PC
 @media screen and (min-width:960px) and (max-width:1279px) {
   body {
-    background:rgb(255, 255, 220);
+    // background:rgb(255, 255, 220);
 
   .default {
     .home {
@@ -387,6 +538,55 @@
     }
 
     .skill {
+      &-main {
+        p {
+          font-size:17px;
+          &:before {
+            top:67px;
+          }
+        }
+        span {
+          font-size:14px;
+        }
+        &-center {
+          height:700px;
+          &-enter {
+            height:0px;
+            &-to {
+              height:700px;
+            }
+          }
+        }
+        &-left {
+          width:320px;
+          height:700px;
+        }
+        &-right {
+          width:320px;
+          height:700px;
+          .right-border {
+            &:before {
+              top:67px;
+            }
+          }
+        }
+        .first {
+          margin-top:90px;
+        }
+        .second {
+          margin-top:120px;
+        }
+        .fifth {
+          margin-top:350px;
+        }
+      }
+      &-bottom {
+        width:90%;
+        &-center > ul > li {
+          width:40%;
+          margin:25px 15px;
+        }
+      }
     }
 
     .work {
@@ -404,8 +604,6 @@
     .contact {
     }
 
-
-
   }
   }
 }
@@ -414,12 +612,9 @@
 // 1280px〜：大型PC
 @media screen and (min-width:1280px) {
   body {
-    background:rgb(255, 214, 255);
+    // background:rgb(255, 214, 255);
   }
 }
-
-
-
 
 
 

@@ -98,6 +98,7 @@
     &-right {
       width:800px;
       margin-left:50px;
+      overflow:hidden;
       > h3 {
         font-size:28px;
         padding:30px 0 10px;
