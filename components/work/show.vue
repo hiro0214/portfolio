@@ -116,7 +116,7 @@ export default {
       width:60%;
       margin:0 auto;
       > img {
-        width:80%;
+        width:420px;
         height:300px;
         border:solid 1px rgb(230, 230, 230);
         display:block;

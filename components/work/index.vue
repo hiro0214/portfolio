@@ -58,7 +58,7 @@ export default {
         flex-wrap:wrap;
         list-style:none;
         li {
-          width:26%;
+          width:250px;
           min-height:250px;
           margin:20px auto;
           cursor:pointer;
