@@ -35,15 +35,15 @@
 
 .home {
   width:100vw;
-  height: calc( 100vh - 60px );
+  height:100vh;
 }
 
 .left {
   &-box {
     background-image: url("~assets/portfolio-img1.jpg");
-    background-size:70vw 80vh;
-    width:70vw;
-    height:80vh;
+    background-size:100% 100%;
+    width:70%;
+    height:80%;
     position:absolute;
     overflow:hidden;
     bottom:0;
