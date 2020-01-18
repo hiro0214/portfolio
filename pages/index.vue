@@ -69,8 +69,8 @@
 }
 
 .right-box {
-  width:80vw;
-  height:100vh;
+  width:80%;
+  height:100%;
   background:#102942;
   position:absolute;
   right:0;
