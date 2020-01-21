@@ -1,7 +1,7 @@
 <template>
   <div class="work">
 
-    <div class="contents-header">
+    <div ref="header" class="contents-header">
       <div class="title">
         <transition name="title" appear>
           <h2>Work</h2>
@@ -25,6 +25,8 @@ export default {
   },
   mounted () {
     this.$store.dispatch('work/workInit')
+    const yTop = this.$refs.header.offsetTop
+    this.$store.dispatch('work/workOffset', yTop)
   },
   destroyed () {
     this.$store.dispatch('work/workOut')

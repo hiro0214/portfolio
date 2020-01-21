@@ -26,6 +26,9 @@
 <script>
 
 export default {
+  created () {
+    window.scroll(0, this.$store.state.work.yTop)
+  },
   methods: {
     workShow (index) {
       this.$parent.currentView = "Show"
