@@ -26,7 +26,7 @@
 <script>
 
 export default {
-  created () {
+  mounted () {
     window.scroll(0, this.$store.state.work.yTop)
   },
   methods: {
