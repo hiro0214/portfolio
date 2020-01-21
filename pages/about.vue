@@ -13,7 +13,9 @@
 
       <transition name="about-main-left" appear>
         <div class="about-main-left">
-          <div class="main-img"></div>
+          <div class="main-img">
+            <img src="~/assets/my-img.jpg">
+          </div>
           <div class="left-info">
             <span>名前 : ひろ</span>
             <span>年齢 : 27歳</span>
@@ -71,9 +73,12 @@
       .main-img {
         width:250px;
         height:250px;
-        background:green;
         margin:0 auto;
-        border-radius:50%;
+        > img {
+          width:100%;
+          height:100%;
+          border-radius:50%;
+        }
       }
       .left-info {
         margin-top:30px;
